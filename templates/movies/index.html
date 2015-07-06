@@ -8,10 +8,15 @@
 <body>
   <header>
     <h1>Eugene's Movie Ratings</h1>
-    <h3>See if you opinions are correct</h3>
+    <h3>See if your opinions are correct</h3>
   </header>
-  <main>
+
+  <section class="clearfix, indexsection">
     <a href="/movies/new"><button>Add New Movie</button></a>
+    <h1>All Movies</h1>
+  </section>
+
+  <main>
     <table>
         <tr>
           <th>Title</th>
@@ -20,21 +25,13 @@
           <th>Rating</th>
         </tr>
   {{#movies}}
-    <tr>
+    <tr class="rows">
       <td><a href="/movies/{{_id}}">{{title}}</a></td>
       <td>{{director}}</td>
       <td>{{year}}</td>
       <td>{{rating}}</td>
-      <td><a href="/movies/{{_id}}/edit"><button>Edit {{title}}</button></a></td>
-      <td><a href="/movies/{{_id}}/delete"><button>Delete {{title}}</button></a></td>
-    </tr>
-    <tr>
-      <td><hr></td>
-      <td><hr></td>
-      <td><hr></td>
-      <td><hr></td>
-      <td><hr></td>
-      <td><hr></td>
+      <td><a href="/movies/{{_id}}/edit"><button class="button">Edit {{title}}</button></a></td>
+      <td><a href="/movies/{{_id}}/delete"><button class="button">Delete {{title}}</button></a></td>
     </tr>
   {{/movies}}
     </table>

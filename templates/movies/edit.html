@@ -8,35 +8,38 @@
 <body>
 <header>
   <h1>Eugene's Movie Ratings</h1>
-  <h3>See if you opinions are correct</h3>
+  <h3>See if your opinions are correct</h3>
 </header>
 <main class="centered">
   <h1>{{title}}</h1>
-  <img src="{{posterurl}}" alt="{{title}} poster">
+  <img class="posterimg" src="{{posterurl}}" alt="{{title}} poster">
   <form action="/movies/{{_id}}/update" method="POST">
-  <table>
-    <tr>
-      <td>Title: </td>
-      <td><input type="text" name="title" placeholder="{{title}}"></td>
-    </tr>
-    <tr>
-      <td>Director: </td>
-      <td><input type="text" name="director" placeholder="{{director}}"></td>
-    </tr>
-    <tr>
-      <td>Year: </td>
-      <td><input type="text" name="year" placeholder="{{year}}"></td>
-    </tr>
-    <tr>
-      <td>My Rating: </td>
-      <td><input type="text" name="rating" placeholder="{{rating}}"></td>
-    </tr>
-    <tr>
-      <td>Poster URl</td>
-      <td><input type="text" name="posterurl" placeholder="{{posterurl}}"></td>
-    </tr>
-  </table>
-      <input type="submit" value="Edit Movie" class="submit">
+    <table>
+      <tr>
+        <td>Title: </td>
+        <td><input type="text" name="title" placeholder="{{title}}"></td>
+      </tr>
+      <tr>
+        <td>Director: </td>
+        <td><input type="text" name="director" placeholder="{{director}}"></td>
+      </tr>
+      <tr>
+        <td>Year: </td>
+        <td><input type="text" name="year" placeholder="{{year}}"></td>
+      </tr>
+      <tr>
+        <td>My Rating: </td>
+        <td><input type="text" name="rating" placeholder="{{rating}}"></td>
+      </tr>
+      <tr>
+        <td>Poster URl</td>
+        <td><input type="text" name="posterurl" placeholder="{{posterurl}}"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><input type="submit" value="Edit Movie" class="submit, button"></td>
+      </tr>
+    </table>
   </form>
 </main>
 </body>
