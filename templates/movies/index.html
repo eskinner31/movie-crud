@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Index</title>
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+  <header>
+    <h1>Eugene's Movie Ratings</h1>
+    <h3>See if you opinions are correct</h3>
+  </header>
+  <main>
+  {{#movies}}
+    <p><a href="/movies/{{_id}}">{{title}}</a></p>
+    <p>{{director}}</p>
+    <p>{{year}}</p>
+    <p>{{rating}}</p>
+    <button><a href="/movies/{{_id}}/edit">Edit {{title}}</a></button>
+    <form action="/movies/{{_id}}/delete" method="POST">
+      <input type="submit" value="Delete Movie">
+    </form>
+  {{/movies}}
+  </main>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add New Movie</title>
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+  <header>
+    <h1>Eugene's Movie Ratings</h1>
+    <h3>See if you opinions are correct</h3>
+  </header>
+  <section>
+    <h2>Add A Movie</h2>
+    <form action="/movies/create" method="POST">
+      <p>Title</p><input type="text" name="title" placeholder="Movie Title">
+      <p>Director</p><input type="text" name="director" placeholder="Director Name">
+      <p>Year</p><input type="text" name="year" placeholder="Release Year">
+      <p>My Rating</p><input type="text" name="rating" placeholder="Moving Rating 1-10">
+      <p>Poster URL</p><input type="text" name="posterurl" placeholder="Image URL">
+      <input type="submit" value="send">
+    </form>
+  </section>
+
+</body>
+</html>

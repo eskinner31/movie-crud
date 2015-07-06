@@ -18,9 +18,9 @@
   },
   "homepage": "https://github.com/eskinner31/movie-crud",
   "dependencies": {
-    "handlebars": "^3.0.3",
     "mime": "^1.3.4",
     "monk": "^1.0.1",
+    "mustache": "^2.1.2",
     "nodemon": "^1.3.7",
     "qs": "^4.0.0",
     "routes": "^2.0.0"

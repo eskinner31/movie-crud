@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Movie</title>
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+<header>
+  <h1>Eugene's Movie Ratings</h1>
+  <h3>See if you opinions are correct</h3>
+</header>
+<main>
+  <h1>{{title}}</h1>
+  <img src="{{posterurl}}" alt="{{title}} poster">
+  <form action="/movies/{{_id}}/update" method="POST">
+    <p>Title</p><input type="text" name="title" placeholder="{{title}}">
+    <p>Director</p><input type="text" name="director" placeholder="{{director}}">
+    <p>Year</p><input type="text" name="year" placeholder="{{year}}">
+    <p>My Rating</p><input type="text" name="rating" placeholder="{{rating}}">
+    <p>Poster URL</p><input type="text" name="posterurl" placeholder="{{posterurl}}">
+    <input type="submit" value="send">
+  </form>
+</main>
+</body>
+</html>
