@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Add New Movie</title>
-  <link rel="stylesheet" href="/public/style.css">
+  <link rel="stylesheet" href="/public/stylesheets/style.css">
 </head>
 <body>
   <header>
@@ -13,12 +13,29 @@
   <section>
     <h2>Add A Movie</h2>
     <form action="/movies/create" method="POST">
-      <p>Title</p><input type="text" name="title" placeholder="Movie Title">
-      <p>Director</p><input type="text" name="director" placeholder="Director Name">
-      <p>Year</p><input type="text" name="year" placeholder="Release Year">
-      <p>My Rating</p><input type="text" name="rating" placeholder="Moving Rating 1-10">
-      <p>Poster URL</p><input type="text" name="posterurl" placeholder="Image URL">
-      <input type="submit" value="send">
+      <table>
+        <tr>
+          <td>Title</td>
+          <td><input type="text" name="title" placeholder="Movie Title"></td>
+        </tr>
+        <tr>
+          <td>Director</td>
+          <td><input type="text" name="director" placeholder="Director Name"></td>
+        </tr>
+        <tr>
+          <td>Year</td>
+          <td><input type="text" name="year" placeholder="Release Year"></td>
+        </tr>
+        <tr>
+          <td>My Rating</td>
+          <td><input type="text" name="rating" placeholder="Moving Rating 1-10"></td>
+        </tr>
+        <tr>
+          <td>Poster URL</td>
+          <td><input type="text" name="posterurl" placeholder="Image URL"></td>
+        </tr>
+      </table>
+      <input type="submit" value="Add Movie">
     </form>
   </section>
 

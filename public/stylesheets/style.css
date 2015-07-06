@@ -1,0 +1,26 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body{
+  background-color: grey;
+  min-width: 100%;
+  min-height: 100%
+  padding: 0px;
+}
+header {
+  background-color: black;
+  color: white;
+  margin: 0px;
+}
+.centered {
+  width: 40%;
+  margin: 0 auto;
+}
+.centered p {
+
+}
+.submit {
+  display: block;
+}

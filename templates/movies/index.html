@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Movie Index</title>
-  <link rel="stylesheet" href="/public/style.css">
+  <link rel="stylesheet" href="/public/stylesheets/style.css">
 </head>
 <body>
   <header>
@@ -11,16 +11,33 @@
     <h3>See if you opinions are correct</h3>
   </header>
   <main>
+    <a href="/movies/new"><button>Add New Movie</button></a>
+    <table>
+        <tr>
+          <th>Title</th>
+          <th>Director</th>
+          <th>Year</th>
+          <th>Rating</th>
+        </tr>
   {{#movies}}
-    <p><a href="/movies/{{_id}}">{{title}}</a></p>
-    <p>{{director}}</p>
-    <p>{{year}}</p>
-    <p>{{rating}}</p>
-    <button><a href="/movies/{{_id}}/edit">Edit {{title}}</a></button>
-    <form action="/movies/{{_id}}/delete" method="POST">
-      <input type="submit" value="Delete Movie">
-    </form>
+    <tr>
+      <td><a href="/movies/{{_id}}">{{title}}</a></td>
+      <td>{{director}}</td>
+      <td>{{year}}</td>
+      <td>{{rating}}</td>
+      <td><a href="/movies/{{_id}}/edit"><button>Edit {{title}}</button></a></td>
+      <td><a href="/movies/{{_id}}/delete"><button>Delete {{title}}</button></a></td>
+    </tr>
+    <tr>
+      <td><hr></td>
+      <td><hr></td>
+      <td><hr></td>
+      <td><hr></td>
+      <td><hr></td>
+      <td><hr></td>
+    </tr>
   {{/movies}}
+    </table>
   </main>
 </body>
 </html>

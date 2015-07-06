@@ -76,13 +76,11 @@ routes.addRoute('/movies/:id/edit',(req,res,url)=>{
 
 //Route to Delete Page
 routes.addRoute('/movies/:id/delete',(req,res,url)=>{
-  if(req.method === 'POST'){
     movies.remove({_id: url.params.id},function(err,film){
       if(err)return err
       res.writeHead(302,{'Location':'/movies'})
       res.end()
     })
-  }
 })
 
 //Route to update Page

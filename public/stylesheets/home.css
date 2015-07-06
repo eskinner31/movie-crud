@@ -1,0 +1,27 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  padding: 0px;
+}
+header {
+  background-color: black;
+  color: white;
+  margin: 0px;
+}
+main {
+  width: 100%;
+  height: 1000px;
+  background-image: url(http://images2.fanpop.com/images/photos/6100000/The-Matrix-Wallpaper-the-matrix-6100553-1024-768.jpg);
+  background-size: cover;
+  margin: 0px;
+}
+
+main a {
+  color: white;
+  border: 2px solid white;
+  text-decoration: none;
+  font-size: 30px;
+}
