@@ -5,28 +5,28 @@ var routes = require('routes')(),
     qs = require('qs'),
     view = require('mustache'),
     //view = require('./view') ---> If you get time to refactor the project
-    mime = require('mime');
+    mime = require('mime'),
+    movieRoutes = require('./routes/movie')
 
 
 //Route to the Home Page
-routes.addRoute('/',(req,res,url) =>{
+routes.addRoute('/', (req,res,url) =>{
   res.setHeader('Content-Type','text/html')
   var file = fs.readFileSync('templates/movies/home.html')
   var template = file.toString()
   res.end(template)
 })
 
-//Route to the Index Page
-routes.addRoute('/movies', function(req,res,url) {
-  if(req.method === 'GET'){
-    res.setHeader('Content-Type','text/html')
-    movies.find({},function(err,docs){
-      var file = fs.readFileSync('templates/movies/index.html')
-      var template = view.render(file.toString(),{movies: docs})
-      res.end(template)
-    })
-  }
-})
+// Movie Routes
+routes.addRoute('/movies', movieRoutes.index)
+routes.addRoute('/movies/:id', movieRoutes.show)
+routes.addRoute('/movies/:id/edit', movieRoutes.edit)
+
+// Users Routes
+routes.addRoute('/signup', userRoutes.signup)
+routes.addRoute('/movies/:id', movieRoutes.show)
+routes.addRoute('/movies/:id/edit', movieRoutes.edit)
+
 
 //Route to public addresses
 routes.addRoute('/public/*', (req,res,url) =>{
